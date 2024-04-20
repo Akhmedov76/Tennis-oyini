@@ -1,0 +1,37 @@
+import random
+user_nat = 0
+comp_nat = 0
+comp_zar = 0
+while comp_zar != 5:
+    user1 = input(f"Siz qaysi tamonga urasiz!\n chap, o'rta, o'ng\n")
+    bot = ["chap", "o'rta", "o'ng"]
+    bot1 = random.choice(bot)
+    print("ZARBAA!!!")
+    # print("Bot " + bot1 + " ga otildi")
+    if user1 == bot1:
+        print("Zarba qayrtarildi!")
+        print(f"user: {str(user_nat)} \nBot: {str(comp_nat)}")
+    elif "chap" !=user1 and "o'rta" != user1 and "o'ng" != user1:
+        print("Siz notog'ri zarba berdingiz")
+    else:
+        print("G'alaba")
+        user_nat += 1
+    user2 = input("Qaysi tarafni qaytarsiz?")
+    bot = ["chap", "o'rta", "o'ng"]
+    bot1 = random.choice(bot)
+    comp_zar += 1
+    print("Bot" + bot1 + " tamonga urdi")
+    if user2 == bot1:
+        print("Zarba qayrtarildi!")
+        print(f"Siz: {str(user_nat)} \nBot:{str(comp_nat)}")
+    else:
+        print("G'alaba")
+        comp_nat += 1
+if comp_zar == 5:
+    print("O'yin tugadi")
+if comp_nat > user_nat:
+    print("Bot yutdi, siz yutqazdingiz")
+elif user_nat > comp_nat:
+    print("Siz yutdi bot yutqazdi")
+else:
+    print("Durrang")
